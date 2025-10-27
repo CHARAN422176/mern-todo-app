@@ -1,0 +1,129 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.App {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* --- Add Form --- */
+.add-form {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-form input[name="task"] {
+  grid-column: 1 / -1; /* Span all columns */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.add-form input[name="description"] {
+  grid-column: 1 / -1; /* Span all columns */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.add-form input[name="dueDate"] {
+  grid-column: 1 / 2; /* First column */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.add-form button {
+  grid-column: 2 / -1; /* Span remaining columns */
+  padding: 10px 15px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* --- Todo List Header --- */
+.tasks-header {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #eee;
+  color: #444;
+}
+
+/* --- Todo List --- */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Task Details (Left Side) */
+.task-details {
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.task-text {
+  font-size: 1.1rem;
+  color: #333;
+}
+.task-desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 4px;
+}
+.task-date {
+  font-size: 0.8rem;
+  color: #a5a5a5;
+  margin-top: 4px;
+}
+
+/* Mark as complete styles */
+.todo-item.is-complete .task-text {
+  text-decoration: line-through;
+  color: #999;
+}
+.todo-item.is-complete .task-desc,
+.todo-item.is-complete .task-date {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+
+/* Task Buttons (Right Side) */
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* All 'edit' related styles have been removed */
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
