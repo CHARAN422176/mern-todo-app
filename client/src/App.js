@@ -4,7 +4,7 @@ import './App.css';
 
 // const API_BASE_URL = 'http://localhost:5000';
 // const API_BASE_URL = 'http://localhost:5000'; // Before
-const API_BASE_URL = 'https://mern-todo-api-xxxx.onrender.com'; // After (Paste your URL) // Or your deployed Render URL
+const API_BASE_URL = 'https://mern-todo-app-apsz.onrender.com'; // After (Paste your URL) // Or your deployed Render URL
 
 function App() {
   const [todos, setTodos] = useState([]);
